@@ -1,16 +1,14 @@
-
-
-body{
-  font-family: 'Press Start 2P', cursive;
+body {
+  font-family: "Press Start 2P", cursive;
   font-size: 14px;
   color: aliceblue;
   margin: 0;
   padding: 0;
 }
 
-html{
-    background-image: url(img/art.jpg);
-    background-size: cover;
+html {
+  background-image: url(img/art.jpg);
+  background-size: cover;
 }
 
 ul {
@@ -21,7 +19,7 @@ ul {
 }
 ul:after {
   display: block;
-  content: ' ';
+  content: " ";
   clear: both;
   float: none;
 }
@@ -33,7 +31,7 @@ ul.menu > li > a {
   display: block;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  background-color:rgb(28, 0, 184);
+  background-color: rgb(28, 0, 184);
   padding: 12px;
 }
 ul.menu > li > a:hover {
@@ -45,7 +43,7 @@ ul.submenu {
   width: 120px;
   top: 37px;
   left: 0;
-  background-color:  rgb(38, 25, 112);
+  background-color: rgb(38, 25, 112);
   border: 1px solid rgb(38, 25, 112);
 }
 ul.submenu > li {
@@ -55,9 +53,8 @@ ul.submenu > li > a {
   display: block;
   padding: 10px;
   color: rgb(255, 255, 255);
-  background-color:  rgb(38, 25, 112);
+  background-color: rgb(38, 25, 112);
   text-decoration: none;
-
 }
 ul.submenu > li > a:hover {
   text-decoration: underline;
@@ -67,11 +64,11 @@ ul.menu > li:hover > ul.submenu {
 }
 
 footer {
-    padding: 5px;
-    position:fixed;
-    bottom:0;
-    left:37%;
-    right:37%;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 37%;
+  right: 37%;
 }
 
 main {
@@ -81,7 +78,7 @@ main {
 }
 
 .main_title {
-  margin-top:10px;
+  margin-top: 10px;
   text-align: center;
 }
 
