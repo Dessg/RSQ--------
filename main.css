@@ -88,3 +88,17 @@ main {
   flex-direction: row;
   gap: 10px;
 }
+
+.player_info_sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.player_info_sub > p {
+  height: 0px;
+}
+
+.rang {
+  color:orange;
+}
