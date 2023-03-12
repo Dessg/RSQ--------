@@ -7,8 +7,10 @@ body {
 }
 
 html {
-  background-image: url(img/art.jpg);
-  background-size: cover;
+  background-image: url(img/logo.png),url(img/bkgrnd.jpg);
+  background-size:  150% ,cover;
+  background-repeat: no-repeat , no-repeat;
+  background-position: -10% 25% ,center;
 }
 
 ul {
@@ -68,8 +70,8 @@ footer {
   padding: 5px;
   position: fixed;
   bottom: 0;
-  left: 37%;
-  right: 37%;
+  left: 35%;
+  right: 30%;
 }
 
 main {
@@ -87,4 +89,27 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+
+.player_info_sub {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.player_info_sub > p {
+  height: 0px;
+}
+
+.rang {
+  color:orange;
+}
+
+.story_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.story_block > p {
+  height: 8px;
 }
