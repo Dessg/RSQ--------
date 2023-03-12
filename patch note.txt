@@ -27,24 +27,8 @@
         Изменение background сайта . Теперь сайт имеет двойной background и перенастроен.
         Надпись "All right reserved" удалена со всех вкладок кроме Home и 404 ,для избежания лагов 
         Изменена структура текста в aboutUs.html
-
-
-_________________пример для Dessg
-код html
-
-    <div id="sti">
-        <h3>STI</h3>
-        <div class="player_info">
-          <a href="weekly.html#sti1"><img src="img/player_ico/STI.jpg" title="Статистика игрока STI"/></a>
-            <div class="player_info_sub">
-              <p>Настоящее имя : Тазов Тимур </p>
-              <p>Дата рождения : 13.10.1999 (23 года)</p>
-              <p>Избранные герои : Drow Ranger , Juggernaut , Terrorblade .</p>
-              <p>Роли : <span class="rang"> Carry(1st Pos) , Hard(3st Pos) </span> </p>
-              <p>Звание : <span class="rang"> Рыцарь II </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
-            </div>
-        </div>
-    </div>
-
-необходимо переработать по данному примеру вкладку "weekly" (после выполнения удалить данную подсказку)
+12.03.2023
+    Tony
+        Переработана вкладка weekly.html , добавлен состав.
+        Добавлены ссылки на vk и discord во вкладке aboutUs.html
+        Добавлена некоторая информация по игрокам во вкладке players.html
