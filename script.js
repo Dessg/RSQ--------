@@ -20,3 +20,24 @@ function random_button() {
     let number = Math.floor(Math.random() * 124 + 1);
     document.getElementById("result_random").innerHTML = "ROLL(1-124):" + number + " " + heroes_pull[number];
 }
+
+let data_stat =  null;
+
+const getStatistic = async () => {
+    await fetch("https://api.opendota.com/api/players/125325708")
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Network response was not ok");
+        }
+      })
+      .then((data) => {
+        data_stat = data;
+        console.log(data_stat);
+        document.getElementById("stats_test").innerHTML = data_stat.profile.personaname;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
