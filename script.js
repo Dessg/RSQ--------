@@ -31,38 +31,67 @@ function random_button() {
   dragon rage - 1200198064
   Poni - 323474403
   */
- 
-  async function getWLStats(id) {
+
+  async function getPlayerInfo(id) {
     try {
-      let nick = null;
+      let infopref = await fetch("https://api.opendota.com/api/players/"+ id);
+      let wlpref = await fetch("https://api.opendota.com/api/players/" + id + "/wl");
+      let info = await infopref.json();
+      let wl = await wlpref.json();
+      let exitUrl1 = null;
+      let exitUrl2 = null;
+      let exitUrl3 = null;
       switch (id){
         case 1196955551:
-          nick = "STI";
+          exitUrl1 = "sti_name";
+          exitUrl2 = "sti_mmr";
+          exitUrl3 = "sti_wl";
           break;
         case 125325708:
-          nick = "Tony SW337";
+          exitUrl1 = "tony_name";
+          exitUrl2 = "tony_mmr";
+          exitUrl3 = "tony_wl";
           break;
         case 167874436:
-          nick = "rodyaN";
+          exitUrl1 = "rodyan_name";
+          exitUrl2 = "rodyan_mmr";
+          exitUrl3 = "rodyan_wl";
           break;
         case 192089161:
-          nick = "Mast1v";
+          exitUrl1 = "mastiv_name";
+          exitUrl2 = "mastiv_mmr";
+          exitUrl3 = "mastiv_wl";
           break;
         case 226799449:
-          nick = "Atom";
+          exitUrl1 = "atom_name";
+          exitUrl2 = "atom_mmr";
+          exitUrl3 = "atom_wl";
           break;
         case 1200198064:
-          nick = "dragon rage";
+          exitUrl1 = "dragon_name";
+          exitUrl2 = "dragon_mmr";
+          exitUrl3 = "dragon_wl";
           break;
         case 323474403:
-          nick = "Пони";
+          exitUrl1 = "poni_name";
+          exitUrl2 = "poni_mmr";
+          exitUrl3 = "poni_wl";
           break;
       }
-      let response = await fetch("https://api.opendota.com/api/players/"+ id +"/wl");
-      let wl = await response.json();
-      
-      document.getElementById(id).innerHTML =  nick + ": Побед:" + wl.win + " /Поражений :" + wl.lose + " /WR: " + Math.round((wl.win/(wl.win+wl.lose))*100) + "%";
-    } catch(error) {
-      console.log("error ,try again");
+
+      document.getElementById(exitUrl1).innerHTML = info.profile.personaname;
+      document.getElementById(exitUrl2).innerHTML = info.mmr_estimate.estimate;
+      document.getElementById(exitUrl3).innerHTML = (wl.win/(wl.win+wl.lose))*100 + " %";
+
+    } catch (error) {
+      console.log("error , dude ");
     }
+  }
+
+  function calcBday(date){
+    let now = new Date();
+    var inputDate = new Date(date);
+    let diffDays = now.getFullYear() - inputDate.getFullYear();
+    alert (diffDays);
+
   }

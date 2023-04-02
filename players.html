@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="main.css" />
+    <script src="script.js"></script>
     <link rel="icon" href="icon.ico" type="image/ico" />
     <title>RSQ players</title>
   </head>
@@ -54,9 +55,17 @@
       </li>
     </ul>
     <main>
-
+      <button onclick="getPlayerInfo(1196955551),
+      getPlayerInfo(125325708),
+      getPlayerInfo(167874436),
+      getPlayerInfo(192089161),
+      getPlayerInfo(226799449),
+      getPlayerInfo(1200198064),
+      getPlayerInfo(323474403)">
+        test refresh
+      </button>
       <div id="sti">
-        <h3>STI</h3>
+        <h3 id="sti_name">STI</h3>
         <div class="player_info">
           <a href="weekly.html#sti1"><img src="img/player_ico/STI.jpg" title="Статистика игрока STI"/></a>
             <div class="player_info_sub">
@@ -64,14 +73,14 @@
               <p>Дата рождения : 13.10.1999 (23 года)</p>
               <p>Избранные герои : Drow Ranger , Juggernaut , Terrorblade .</p>
               <p>Роли : <span class="rang"> Carry(1st pos) , Hard(3rd pos) </span> </p>
-              <p>Звание : <span class="rang"> Рыцарь II </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="sti_wl">x</span></p>   
+              <p>Рейтинг : <span class="rang" id="sti_mmr"> x</span></p>
             </div>
         </div>
       </div>
 
       <div id="tony">
-        <h3>TØNY SW337★★★</h3>
+        <h3 id="tony_name">Tony</h3>
         <div class="player_info">
           <a href="weekly.html#tony1"><img src="img/player_ico/Tony.jpg" title="Статистика игрока TØNY SW337★★★"/></a>
             <div class="player_info_sub">
@@ -79,14 +88,14 @@
               <p>Дата рождения : 07.08.1997 (25 лет)</p>
               <p>Избранные герои : Bristleback , Ember Spirit , Bounty Hunter .</p>
               <p>Роли : <span class="rang"> All positions</span> </p>
-              <p>Звание : <span class="rang"> Рыцарь III </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="tony_wl">x</span></p>   
+              <p>Рейтинг : <span class="rang" id="tony_mmr">x</span></p>
             </div>
         </div>
       </div>
 
       <div id="rodyan">
-        <h3>rodyaN</h3>
+        <h3 id="rodyan_name">rodyaN</h3>
         <div class="player_info">
           <a href="weekly.html#rodyan1"><img src="img/player_ico/rondo.jpg" title="Статистика игрока rodyaN"/></a>
             <div class="player_info_sub">
@@ -94,14 +103,14 @@
               <p>Дата рождения : 29.11.2000 (22 года)</p>
               <p>Избранные герои : Tinker , Invoker , Shadow Fiend .</p>
               <p>Роли : <span class="rang"> All positions</span> </p>
-              <p>Звание : <span class="rang"> Герой I </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="rodyan_wl">x</span></p>   
+              <p>Рейтинг : <span class="rang" id="rodyan_mmr">x</span></p>
             </div>
         </div>
       </div>
 
       <div id="mastiv">
-        <h3>Mast1v</h3>
+        <h3 id="mastiv_name">Mast1v</h3>
         <div class="player_info">
           <a href="weekly.html#mastiv1"><img src="img/player_ico/Mastiv.jpg" title="Статистика игрока Mast1v"/></a>
             <div class="player_info_sub">
@@ -109,14 +118,14 @@
               <p>Дата рождения : 03.01.2001 (22 года)</p>
               <p>Избранные герои : Pudge , Enigma , Magnus .</p>
               <p>Роли : <span class="rang"> Hard(3rd pos) , Offlane(4th pos) </span> </p>
-              <p>Звание : <span class="rang"> Рыцарь I </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="mastiv_wl">x</span></p>   
+              <p>Рейтинг : <span class="rang" id="mastiv_mmr">x</span></p>
             </div>
         </div>
       </div>
 
       <div id="atom">
-        <h3>Atom</h3>
+        <h3 id="atom_name">Atom</h3>
         <div class="player_info">
           <a href="weekly.html#atom1"><img src="img/player_ico/Atom.jpg" title="Статистика игрока Atom"/></a>
             <div class="player_info_sub">
@@ -124,14 +133,14 @@
               <p>Дата рождения : 20.01.1999 (24 года)</p>
               <p>Избранные герои : Trent Protector , Snapfire , Shadow Demon .</p>
               <p>Роли : <span class="rang"> Offlane(4th pos) , Support(5th pos) </span> </p>
-              <p>Звание : <span class="rang"> Рыцарь III </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="atom_wl">x</span></p>   
+              <p>Рейтинг : <span class="rang" id="atom_mmr">x</span></p>
             </div>
         </div>
       </div>
 
       <div id="dragon_rage">
-        <h3>dragon rage</h3>
+        <h3 id="dragon_name">dragon rage</h3>
         <div class="player_info">
           <a href="weekly.html#dragon_rage1"><img src="img/player_ico/dragon.jpg" title="Статистика игрока dragon rage"/></a>
             <div class="player_info_sub">
@@ -139,14 +148,14 @@
               <p>Дата рождения : 29.04.2007 </p>
               <p>Избранные герои : Ogre magi, Clinkz, Phantom Assasin. </p>
               <p>Роли : <span class="rang"> Carry(1st pos), Middle(2nd pos), Offlane(4th pos) </span> </p>
-              <p>Звание : <span class="rang"> x </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="dragon_wl"> x </span></p>   
+              <p>Рейтинг : <span class="rang" id="dragon_mmr">x</span></p>
             </div>
         </div>
       </div>
 
       <div id="poni">
-        <h3>Пони</h3>
+        <h3 id="poni_name">Пони</h3>
         <div class="player_info">
           <a href="weekly.html#poni1"><img src="img/player_ico/Poni.jpg" title="Статистика игрока Пони"/></a>
             <div class="player_info_sub">
@@ -154,8 +163,8 @@
               <p>Дата рождения : 10.07.1998 </p>
               <p>Избранные герои : Witch Doctor , Disraptor, Cristal Maiden. </p>
               <p>Роли : <span class="rang"> Offlane (4th pos), Support (5th pos) </span> </p>
-              <p>Звание : <span class="rang"> x </span></p>   
-              <p>Рейтинг : <span class="rang"> 1500</span></p>
+              <p>Винрейт : <span class="rang" id="poni_wl"> x </span></p>   
+              <p>Рейтинг : <span class="rang" id="poni_mmr">x</span></p>
             </div>
         </div>
       </div>
