@@ -88,10 +88,15 @@ function random_button() {
     }
   }
 
-  function calcBday(date){
-    let now = new Date();
-    var inputDate = new Date(date);
-    let diffDays = now.getFullYear() - inputDate.getFullYear();
-    alert (diffDays);
-
+  function getDaysFromToday(date,exitUrl4) {
+  let oneDay = 24 * 60 * 60 * 1000*365; // количество миллисекунд в одном дне
+  let today = new Date();
+  let inputDate = new Date(date);
+  let diffDays = Math.round(Math.abs((today.getTime() - inputDate.getTime()) / oneDay));
+  if (today.getMonth() < inputDate.getMonth() 
+  || (today.getMonth() == inputDate.getMonth() 
+  && today.getDate() < inputDate.getDate())) {
+    diffDays--;
   }
+  document.getElementById(exitUrl4).innerHTML = "(" + diffDays + " years)";
+}
